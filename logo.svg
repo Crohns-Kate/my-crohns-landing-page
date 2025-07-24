@@ -1,0 +1,37 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with soft gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8C8B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C9885;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8DDD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F3F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="60" cy="60" r="55" fill="url(#bgGradient)" stroke="#6B8574" stroke-width="2"/>
+  
+  <!-- Central heart symbol representing care -->
+  <path d="M60 45 C55 40, 45 40, 45 50 C45 60, 60 70, 60 70 C60 70, 75 60, 75 50 C75 40, 65 40, 60 45 Z" fill="url(#heartGradient)" stroke="#6B8574" stroke-width="1"/>
+  
+  <!-- Medical cross elements (subtle) -->
+  <rect x="57" y="25" width="6" height="20" rx="2" fill="#E8DDD4" opacity="0.8"/>
+  <rect x="50" y="32" width="20" height="6" rx="2" fill="#E8DDD4" opacity="0.8"/>
+  
+  <!-- Support hands -->
+  <path d="M35 55 Q40 50, 45 55 Q45 60, 40 65 Q35 60, 35 55" fill="#F5F3F0" opacity="0.9"/>
+  <path d="M85 55 Q80 50, 75 55 Q75 60, 80 65 Q85 60, 85 55" fill="#F5F3F0" opacity="0.9"/>
+  
+  <!-- Dots for kit items -->
+  <circle cx="30" cy="75" r="3" fill="#E8DDD4"/>
+  <circle cx="45" cy="85" r="3" fill="#E8DDD4"/>
+  <circle cx="75" cy="85" r="3" fill="#E8DDD4"/>
+  <circle cx="90" cy="75" r="3" fill="#E8DDD4"/>
+  
+  <!-- Text elements -->
+  <text x="60" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#6B8574">SURVIVAL</text>
+  <text x="60" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="400" fill="#7C9885">KIT</text>
+</svg>
