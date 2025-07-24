@@ -1,0 +1,84 @@
+Please build a fully responsive, mobile-first HTML + CSS landing page for a digital product called:
+
+**“The Crohn’s Survival Kit for Parents of Teens”**
+
+This page should be designed to **convert cold traffic into buyers**, with a tone of calm authority, emotional support, and simple navigation — optimized for Stripe checkout and Kajabi delivery.
+
+---
+
+### 🔧 Page Structure and Content:
+
+1. **Hero Section**
+   - Large headline: “Your Teen Has Crohn’s. Now What?”
+   - Subheadline: “You’re not alone — and you’re not failing. This $27 survival kit will help you calm the chaos, understand what’s happening, and start taking the right steps — today.”
+   - Embed YouTube video (placeholder for now — ask me for the final link)
+   - Prominent call-to-action button:  
+     Text: “Get the Survival Kit Now – Just $27”  
+     Link to Stripe checkout page (ask me for the Stripe URL)
+
+2. **Trust Section**
+   - Headline: “This isn’t theory. It’s lived experience.”
+   - Body text:  
+     “Kate is a mum who’s walked this road. The kit was created with Dr. Michael Bishopp — a former Crohn’s patient and health expert who has helped thousands of families.”
+
+3. **What’s Inside the Kit**
+   - Headline: “Inside the Kit: Real Answers. Real Calm.”
+   - Use a clean visual layout with icons or tiles
+   - 6 listed items:
+     ✔️ Crohn’s in Plain English  
+     ✔️ Flare-Up Food Guide  
+     ✔️ Symptom Tracking Journal  
+     ✔️ Mum’s Mindset Cheat Sheet  
+     ✔️ Talking to Schools & Doctors  
+     ✔️ Bonus Video: From Kate to You
+
+4. **Testimonials**
+   - Headline: “What Other Parents Are Saying”
+   - Italic text blocks:
+     - “This made me feel so much calmer — finally something that speaks my language.”
+     - “The food cheat sheet was gold. My son actually ate again.”
+     - “Every doctor should give this to parents. Thank you.”
+
+5. **FAQ Section**
+   - Headline: “Still not sure? Let’s answer your questions.”
+   - Three FAQs:
+     Q: Is this just for mums?  
+     A: Mostly, but dads and carers love it too.
+
+     Q: Is it medical advice?  
+     A: No — this works alongside your medical team to help you cope better.
+
+     Q: Will this work if we’re already on medication?  
+     A: Absolutely. This supports mindset, food, and habits — whatever stage you’re at.
+
+6. **Final CTA Section**
+   - Headline: “Take the First Step Toward Calm”
+   - Body: “The Survival Kit is just $27 — and it might change how your whole family copes with Crohn’s.”
+   - CTA Button again: “Yes — I Want the Survival Kit Now”  
+   - Link again to Stripe checkout (ask me for link)
+
+---
+
+### 🖌️ Design Guidelines:
+
+- Use modern sans-serif font (like Inter, Open Sans, or Roboto)
+- Soft, calm palette: whites, muted greens, and beige tones
+- Large, mobile-friendly CTA buttons with hover effect
+- Cards or icons for the “What’s Inside” section
+- Responsive layout that looks great on mobile and desktop
+- Include anchor linking (e.g., button scrolls to second CTA)
+
+---
+
+### ✅ Ask Me for These When Done:
+
+1. YouTube video URL for the embed
+2. Stripe Checkout URL for the button links
+3. Kajabi Thank You Page URL (for Stripe redirect after payment)
+4. Favicon and Open Graph preview (optional extras)
+
+---
+
+This page will be hosted on **Vercel**, coded in Replit, and the Stripe payment will redirect to **Kajabi** for product delivery.
+
+Keep it clean, light, and emotionally reassuring for overwhelmed parents. Avoid gimmicks. Prioritize clarity, calm, and trust.
