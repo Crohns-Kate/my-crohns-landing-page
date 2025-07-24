@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a conversion-optimized landing page for a digital health product called "The Crohn's Survival Kit for Parents of Teens." The page is designed as a single-page application that converts cold traffic into buyers through emotional support messaging and clear value proposition. The product is priced at $27 and targets parents dealing with their teenager's Crohn's disease diagnosis.
+This is a conversion-optimized landing page for a digital health product called "The Crohn's Survival Kit for Parents of Teens." The page is designed as a single-page application that converts cold traffic into buyers through emotional support messaging and clear value proposition. The product normally costs $97 but is offered at $27 with $80 worth of bonus apps (total value $177 for $27), targeting parents dealing with their teenager's Crohn's disease diagnosis.
 
 ## User Preferences
 
