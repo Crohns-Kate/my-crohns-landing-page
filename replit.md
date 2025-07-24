@@ -14,6 +14,13 @@ Preferred communication style: Simple, everyday language.
 - **Static HTML/CSS Website**: Single-page landing page built with vanilla HTML5 and CSS3
 - **Mobile-First Responsive Design**: Uses CSS custom properties and modern layout techniques
 - **Progressive Enhancement**: Basic functionality works without JavaScript, enhanced with optional interactive elements
+- **Interactive Forms**: Newsletter signup and contact forms with real-time validation and database integration
+
+### Backend Architecture
+- **Node.js Server**: Custom HTTP server serving static files and API endpoints
+- **PostgreSQL Database**: Full relational database for visitor tracking, lead capture, and analytics
+- **Drizzle ORM**: Type-safe database operations with schema management
+- **API Endpoints**: RESTful endpoints for form submissions, analytics tracking, and data collection
 
 ### Design System
 - **CSS Custom Properties**: Centralized theming system with predefined color palette, spacing, and typography
@@ -24,17 +31,20 @@ Preferred communication style: Simple, everyday language.
 
 ### 1. Hero Section
 - **Purpose**: Primary conversion area with main value proposition
-- **Elements**: Headline, subheadline, YouTube video embed placeholder, primary CTA button
+- **Elements**: Brand logo, headline, subheadline, YouTube video embed placeholder, primary CTA button
 - **Conversion Focus**: Direct link to Stripe checkout
+- **Branding**: Custom Crohn's Survival Kit logo with health and support themes
 
 ### 2. Trust Building Section
 - **Purpose**: Establish credibility through personal story and expert validation
-- **Content**: Founder story (Kate) and medical expert endorsement (Dr. Michael Bishopp)
+- **Content**: Featured author introduction for Kate with photo placeholder and credentials
+- **Expert Validation**: Dr. Michael Bishopp endorsement and collaboration details
 
 ### 3. Product Content Section
 - **Purpose**: Detail what's included in the digital kit
 - **Structure**: 6-item checklist format with visual icons
 - **Items**: Educational materials, practical tools, and bonus content
+- **Personal Touch**: "Bonus Video: A Personal Message from Kate"
 
 ### 4. Social Proof Section
 - **Purpose**: Display customer testimonials to reduce purchase anxiety
@@ -43,23 +53,45 @@ Preferred communication style: Simple, everyday language.
 ### 5. FAQ Section
 - **Purpose**: Address common objections and concerns
 - **Content**: Targeted questions about audience fit and medical disclaimers
+- **Analytics**: Click tracking for FAQ interactions to identify common concerns
+
+### 6. Newsletter Signup Section
+- **Purpose**: Lead capture for email marketing before purchase decision
+- **Features**: Email validation, database storage, success/error messaging
+- **Source Tracking**: Attribution to landing page for analytics
+
+### 7. Contact Section
+- **Purpose**: Direct communication channel for questions and support
+- **Features**: Full contact form with name, email, and message fields
+- **Database Storage**: All submissions stored for follow-up and customer service
 
 ## Data Flow
 
 ### User Journey
-1. **Landing**: User arrives from cold traffic (ads, social media, referrals)
+1. **Landing**: User arrives from cold traffic (ads, social media, referrals) - automatically tracked in database
 2. **Engagement**: Video content and emotional messaging build connection
-3. **Value Recognition**: Product contents and testimonials establish value
-4. **Objection Handling**: FAQ section addresses concerns
-5. **Conversion**: Multiple CTA buttons lead to Stripe checkout
-6. **Fulfillment**: Post-purchase delivery through Kajabi platform
+3. **Lead Capture**: Optional newsletter signup for email marketing (pre-purchase nurturing)
+4. **Value Recognition**: Product contents and testimonials establish value
+5. **Objection Handling**: FAQ section addresses concerns - interactions tracked for optimization
+6. **Conversion**: Multiple CTA buttons lead to Stripe checkout
+7. **Support**: Contact form available for questions throughout journey
+8. **Fulfillment**: Post-purchase delivery through Kajabi platform
+
+### Database Tracking
+- **Visitor Analytics**: Session tracking, user agents, referrer data for traffic analysis
+- **Lead Generation**: Newsletter signups with source attribution
+- **Engagement Analytics**: FAQ interaction tracking to identify common concerns
+- **Customer Support**: Contact form submissions for follow-up and service
+- **Purchase Tracking**: Integration point for Stripe webhook data (when implemented)
 
 ### Conversion Funnel
-- **Awareness**: Hero section with problem identification
-- **Interest**: Trust building and expert credibility
-- **Consideration**: Detailed product breakdown
+- **Awareness**: Hero section with problem identification + visitor tracking
+- **Interest**: Trust building and expert credibility + engagement analytics
+- **Consideration**: Detailed product breakdown + FAQ interaction tracking
+- **Lead Nurturing**: Newsletter signup for email marketing campaigns
 - **Intent**: Social proof and testimonials
-- **Action**: Stripe checkout integration
+- **Action**: Stripe checkout integration + purchase recording
+- **Support**: Contact form for ongoing customer relationship
 
 ## External Dependencies
 

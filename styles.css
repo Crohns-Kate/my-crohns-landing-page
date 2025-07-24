@@ -481,6 +481,18 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     min-width: 300px;
   }
+  
+  .newsletter-form {
+    flex-direction: row;
+  }
+  
+  .newsletter-form input[type="email"] {
+    flex: 1;
+  }
+  
+  .newsletter-form .cta-button {
+    min-width: 150px;
+  }
 }
 
 /* Desktop Styles */
@@ -544,9 +556,117 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Newsletter Section */
+.newsletter {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-accent);
+}
+
+.newsletter-text {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-sm);
+  max-width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.newsletter-form input[type="email"] {
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  flex: 1;
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px rgba(124, 152, 133, 0.1);
+}
+
+.cta-button.secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Contact Section */
+.contact {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-white);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 152, 133, 0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Form Messages */
+.form-message {
+  margin-top: var(--spacing-sm);
+  text-align: center;
+}
+
+.success-message {
+  color: var(--color-success);
+  font-weight: 500;
+  margin: 0;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: 500;
+  margin: 0;
+}
+
 /* Focus styles for accessibility */
 .cta-button:focus,
-a:focus {
+a:focus,
+input:focus,
+textarea:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }

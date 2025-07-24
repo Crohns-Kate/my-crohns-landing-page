@@ -147,6 +147,19 @@
         </div>
     </section>
 
+    <!-- Newsletter Signup Section (Optional lead capture) -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p class="newsletter-text">Get helpful tips and updates about supporting teens with Crohn's.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button secondary">Subscribe</button>
+            </form>
+            <div id="newsletter-message" class="form-message"></div>
+        </div>
+    </section>
+
     <!-- Final CTA Section -->
     <section id="final-cta" class="final-cta">
         <div class="container">
@@ -162,8 +175,120 @@
         </div>
     </section>
 
-    <!-- Smooth Scroll Script -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Have Questions? Get in Touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button secondary">Send Message</button>
+            </form>
+            <div id="contact-message" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Analytics and Form Handling Script -->
     <script>
+        // Generate session ID for analytics
+        const sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2);
+        
+        // Track visitor
+        function trackVisitor() {
+            fetch('/api/track-visitor', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: sessionId,
+                    userAgent: navigator.userAgent,
+                    referrer: document.referrer,
+                    ipAddress: null // Will be set by server
+                })
+            }).catch(console.error);
+        }
+        
+        // Track FAQ interactions
+        function trackFaqInteraction(questionId, interactionType) {
+            fetch('/api/track-faq', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    questionId: questionId,
+                    sessionId: sessionId,
+                    interactionType: interactionType
+                })
+            }).catch(console.error);
+        }
+        
+        // Newsletter signup form
+        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const messageDiv = document.getElementById('newsletter-message');
+            
+            try {
+                const response = await fetch('/api/newsletter-signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, source: 'landing_page' })
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    messageDiv.innerHTML = '<p class="success-message">✓ ' + result.message + '</p>';
+                    document.getElementById('newsletter-email').value = '';
+                } else {
+                    messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
+                }
+            } catch (error) {
+                messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
+            }
+        });
+        
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+            const messageDiv = document.getElementById('contact-message');
+            
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: name, email: email, message: message })
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    messageDiv.innerHTML = '<p class="success-message">✓ ' + result.message + '</p>';
+                    document.getElementById('contact-form').reset();
+                } else {
+                    messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
+                }
+            } catch (error) {
+                messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
+            }
+        });
+        
+        // FAQ click tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    trackFaqInteraction('faq_' + (index + 1), 'clicked');
+                });
+            });
+        });
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -177,6 +302,9 @@
                 }
             });
         });
+        
+        // Track visitor on page load
+        trackVisitor();
     </script>
 </body>
 </html>
