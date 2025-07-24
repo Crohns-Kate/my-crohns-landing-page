@@ -55,27 +55,35 @@ Preferred communication style: Simple, everyday language.
 - **Content**: Targeted questions about audience fit and medical disclaimers
 - **Analytics**: Click tracking for FAQ interactions to identify common concerns
 
-### 6. Newsletter Signup Section
-- **Purpose**: Lead capture for email marketing before purchase decision
-- **Features**: Email validation, database storage, success/error messaging
-- **Source Tracking**: Attribution to landing page for analytics
+### 6. Bonus Apps Section
+- **Purpose**: Showcase high-value bonus offerings to increase perceived value
+- **Content**: Three premium apps (Zen Whisper, Crohn's Space AI Journal, Crohn's AI Voice)
+- **Value**: $80 worth of bonus apps for 3-month premium access
+- **Visual Design**: Gradient app icons with hover effects and clear value propositions
 
-### 7. Contact Section
-- **Purpose**: Direct communication channel for questions and support
-- **Features**: Full contact form with name, email, and message fields
-- **Database Storage**: All submissions stored for follow-up and customer service
+### 7. Scarcity & Urgency Section
+- **Purpose**: Create time-sensitive urgency to drive immediate conversions
+- **Features**: Live countdown timer (7-day deadline), value summary, price comparison
+- **Psychology**: Fear of missing out (FOMO) combined with clear value demonstration
+- **Design**: Dark gradient background with glowing countdown elements
+
+### 8. Enhanced Final CTA Section
+- **Purpose**: Ultimate conversion point with maximum persuasion elements
+- **Features**: Mega CTA button, trust badges, guarantees display
+- **Reassurance**: 30-day money-back guarantee, instant download, device compatibility
 
 ## Data Flow
 
 ### User Journey
-1. **Landing**: User arrives from cold traffic (ads, social media, referrals) - automatically tracked in database
-2. **Engagement**: Video content and emotional messaging build connection
-3. **Lead Capture**: Optional newsletter signup for email marketing (pre-purchase nurturing)
-4. **Value Recognition**: Product contents and testimonials establish value
+1. **Landing**: User arrives from cold traffic with immediate urgency banner and value proposition
+2. **Engagement**: Video content and emotional messaging build connection with Kate's story
+3. **Value Recognition**: Product contents with visual icons establish base value ($27)
+4. **Social Proof**: Testimonials reduce purchase anxiety and build trust
 5. **Objection Handling**: FAQ section addresses concerns - interactions tracked for optimization
-6. **Conversion**: Multiple CTA buttons lead to Stripe checkout
-7. **Support**: Contact form available for questions throughout journey
-8. **Fulfillment**: Post-purchase delivery through Kajabi platform
+6. **Bonus Value**: Three premium apps worth $80 presented as limited-time bonus
+7. **Scarcity Creation**: 7-day countdown timer creates urgency and fear of missing out
+8. **Final Conversion**: Multiple enhanced CTA buttons with guarantees lead to Stripe checkout
+9. **Fulfillment**: Post-purchase delivery through Kajabi platform with bonus app access
 
 ### Database Tracking
 - **Visitor Analytics**: Session tracking, user agents, referrer data for traffic analysis

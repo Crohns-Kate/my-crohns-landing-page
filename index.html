@@ -31,6 +31,14 @@
                 <h1 class="hero-title">Your Teen Has Crohn's. Now What?</h1>
                 <p class="hero-subtitle">You're not alone — and you're not failing. This $27 survival kit will help you calm the chaos, understand what's happening, and start taking the right steps — today.</p>
                 
+                <!-- Urgency Banner -->
+                <div class="urgency-banner">
+                    <div class="urgency-timer">
+                        <i class="fas fa-clock"></i>
+                        <span><strong>LIMITED TIME:</strong> Order in the next 7 days and get 3 bonus apps worth $80 FREE!</span>
+                    </div>
+                </div>
+                
                 <!-- YouTube Video Placeholder -->
                 <div class="video-container">
                     <div class="video-placeholder">
@@ -39,7 +47,19 @@
                     </div>
                 </div>
                 
-                <a href="#stripe-checkout" class="cta-button primary">Get the Survival Kit Now – Just $27</a>
+                <div class="value-prop">
+                    <div class="price-display">
+                        <span class="original-price">Regular Kit: $27</span>
+                        <span class="bonus-value">+ 3 Bonus Apps: $80</span>
+                        <span class="total-value">Total Value: $107</span>
+                    </div>
+                    <div class="special-offer">
+                        <span class="offer-text">Your Price Today:</span>
+                        <span class="final-price">Just $27</span>
+                        <span class="savings">You Save $80!</span>
+                    </div>
+                </div>
+                <a href="#stripe-checkout" class="cta-button primary pulse">Get Everything for Just $27 – Limited Time!</a>
             </div>
         </div>
     </section>
@@ -147,51 +167,119 @@
         </div>
     </section>
 
-    <!-- Newsletter Signup Section (Optional lead capture) -->
-    <section id="newsletter" class="newsletter">
+    <!-- Bonus Apps Section -->
+    <section id="bonus-apps" class="bonus-apps">
         <div class="container">
-            <h2 class="section-title">Stay Updated</h2>
-            <p class="newsletter-text">Get helpful tips and updates about supporting teens with Crohn's.</p>
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
-                <button type="submit" class="cta-button secondary">Subscribe</button>
-            </form>
-            <div id="newsletter-message" class="form-message"></div>
+            <h2 class="section-title">FREE Bonus Apps When You Order Today</h2>
+            <p class="bonus-intro">Order in the next 7 days and get instant access to these 3 premium apps — normally $80, yours free!</p>
+            
+            <div class="bonus-grid">
+                <div class="bonus-app">
+                    <div class="app-icon zen-whisper">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Zen Whisper</h3>
+                    <p class="app-value">Worth $30</p>
+                    <p class="app-description">Guided meditation and mindfulness exercises designed specifically for parents managing chronic illness stress.</p>
+                </div>
+                
+                <div class="bonus-app">
+                    <div class="app-icon crohns-journal">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Crohn's Space AI Journal</h3>
+                    <p class="app-value">Worth $25</p>
+                    <p class="app-description">AI-powered journaling that helps track patterns, emotions, and triggers while providing personalized insights.</p>
+                </div>
+                
+                <div class="bonus-app">
+                    <div class="app-icon voice-journal">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Crohn's AI Voice</h3>
+                    <p class="app-value">Worth $25</p>
+                    <p class="app-description">Quick voice-activated journal for busy parents — speak your thoughts and let AI organize your insights.</p>
+                </div>
+            </div>
+            
+            <div class="bonus-guarantee">
+                <div class="guarantee-badge">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                        <h4>3-Month Premium Access</h4>
+                        <p>Full access to all three apps for 90 days — completely free with your order today!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity & Urgency Section -->
+    <section id="scarcity" class="scarcity">
+        <div class="container">
+            <div class="scarcity-content">
+                <h2 class="section-title">Don't Wait — This Offer Disappears in 7 Days</h2>
+                <div class="countdown-timer">
+                    <div class="timer-box">
+                        <span class="time" id="days">7</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="time" id="hours">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="time" id="minutes">00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                </div>
+                <p class="scarcity-text">After 7 days, you'll pay the full price of $107. But right now, you get everything for just $27.</p>
+                
+                <div class="final-value-summary">
+                    <h3>Here's What You Get Today:</h3>
+                    <ul class="value-list">
+                        <li><i class="fas fa-check"></i> The Complete Crohn's Survival Kit ($27 value)</li>
+                        <li><i class="fas fa-check"></i> Zen Whisper Meditation App ($30 value)</li>
+                        <li><i class="fas fa-check"></i> Crohn's Space AI Journal ($25 value)</li>
+                        <li><i class="fas fa-check"></i> Crohn's AI Voice Journal ($25 value)</li>
+                        <li><i class="fas fa-check"></i> 3 Months Premium Access to All Apps</li>
+                    </ul>
+                    <div class="final-price-breakdown">
+                        <span class="crossed-out">Total Value: $107</span>
+                        <span class="final-price-large">Your Price: $27</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
     <section id="final-cta" class="final-cta">
         <div class="container">
-            <h2 class="section-title">Take the First Step Toward Calm</h2>
-            <p class="cta-text">The Survival Kit is just $27 — and it might change how your whole family copes with Crohn's.</p>
-            <a href="#stripe-checkout" class="cta-button primary">Yes — I Want the Survival Kit Now</a>
+            <h2 class="section-title">Get Instant Access Now</h2>
+            <p class="cta-text">Join hundreds of parents who've found their calm. Download starts immediately after purchase.</p>
+            <a href="#stripe-checkout" class="cta-button primary mega-cta pulse">Yes! Give Me Everything for Just $27</a>
+            
+            <div class="guarantees">
+                <div class="guarantee-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>30-Day Money-Back Guarantee</span>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-download"></i>
+                    <span>Instant Digital Download</span>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Works on All Devices</span>
+                </div>
+            </div>
             
             <!-- Stripe Checkout Placeholder -->
             <div id="stripe-checkout" class="stripe-placeholder">
                 <p><strong>Stripe Checkout Integration</strong><br>
                 <small>Checkout URL to be provided</small></p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Have Questions? Get in Touch</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="contact-name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="contact-email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="contact-message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="cta-button secondary">Send Message</button>
-            </form>
-            <div id="contact-message" class="form-message"></div>
         </div>
     </section>
 
@@ -227,57 +315,32 @@
             }).catch(console.error);
         }
         
-        // Newsletter signup form
-        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = document.getElementById('newsletter-email').value;
-            const messageDiv = document.getElementById('newsletter-message');
+        // Countdown Timer (7 days from page load)
+        function startCountdown() {
+            const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
             
-            try {
-                const response = await fetch('/api/newsletter-signup', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, source: 'landing_page' })
-                });
+            const timer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
                 
-                const result = await response.json();
-                if (result.success) {
-                    messageDiv.innerHTML = '<p class="success-message">✓ ' + result.message + '</p>';
-                    document.getElementById('newsletter-email').value = '';
-                } else {
-                    messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
-                }
-            } catch (error) {
-                messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
-            }
-        });
-        
-        // Contact form
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const message = document.getElementById('contact-message').value;
-            const messageDiv = document.getElementById('contact-message');
-            
-            try {
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name: name, email: email, message: message })
-                });
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 
-                const result = await response.json();
-                if (result.success) {
-                    messageDiv.innerHTML = '<p class="success-message">✓ ' + result.message + '</p>';
-                    document.getElementById('contact-form').reset();
-                } else {
-                    messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
+                // Update timer display
+                document.getElementById('days').innerHTML = days < 10 ? '0' + days : days;
+                document.getElementById('hours').innerHTML = hours < 10 ? '0' + hours : hours;
+                document.getElementById('minutes').innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                
+                // If countdown is finished
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('days').innerHTML = '00';
+                    document.getElementById('hours').innerHTML = '00';
+                    document.getElementById('minutes').innerHTML = '00';
                 }
-            } catch (error) {
-                messageDiv.innerHTML = '<p class="error-message">✗ Something went wrong. Please try again.</p>';
-            }
-        });
+            }, 1000);
+        }
         
         // FAQ click tracking
         document.addEventListener('DOMContentLoaded', function() {
@@ -303,8 +366,9 @@
             });
         });
         
-        // Track visitor on page load
+        // Initialize page functionality
         trackVisitor();
+        startCountdown();
     </script>
 </body>
 </html>
