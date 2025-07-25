@@ -4,6 +4,8 @@
 
 This is a conversion-optimized landing page for a digital health product called "The Crohn's Survival Kit for Parents of Teens." The page is designed as a single-page application that converts cold traffic into buyers through emotional support messaging and clear value proposition. The product normally costs $97 but is offered at $27 with $80 worth of bonus apps (total value $177 for $27), targeting parents dealing with their teenager's Crohn's disease diagnosis.
 
+**Current Status**: Production-ready with complete deployment infrastructure configured for GitHub → Vercel workflow.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -101,23 +103,39 @@ Preferred communication style: Simple, everyday language.
 - **Action**: Stripe checkout integration + purchase recording
 - **Support**: Contact form for ongoing customer relationship
 
-## External Dependencies
+## Deployment Infrastructure
 
-### Payment Processing
+### Production Deployment (Ready)
+- **GitHub Repository**: Source code management and version control
+- **Vercel Hosting**: Serverless deployment with automatic builds
+- **Neon PostgreSQL**: Production database hosting
+- **Environment Variables**: Secure configuration management
+
+### Deployment Files Created
+- `vercel.json` - Vercel routing and build configuration
+- `package-production.json` - Production-ready package.json
+- `.gitignore` - Repository exclusion rules
+- `.env.example` - Environment variable template
+- `DEPLOYMENT-INSTRUCTIONS.md` - Complete deployment guide
+- `netlify.toml` - Alternative Netlify deployment option
+
+### External Dependencies
+
+#### Payment Processing
 - **Stripe Checkout**: Handles all payment processing and transaction security
 - **Integration Method**: Direct links to Stripe-hosted checkout pages
-- **Currency**: Assumed USD based on $27 pricing
+- **Currency**: USD based on $27 pricing
 
-### Content Delivery
+#### Content Delivery
 - **Kajabi Platform**: Digital product delivery and customer management
 - **Integration**: Post-purchase redirect and customer onboarding
 
-### Media Assets
+#### Media Assets
 - **YouTube**: Video content hosting and embedding
 - **Google Fonts**: Inter font family for typography
 - **Font Awesome**: Icon library for visual elements
 
-### Analytics (Recommended)
+#### Analytics (Recommended)
 - **Google Analytics**: Conversion tracking and user behavior analysis
 - **Facebook Pixel**: Retargeting and ad optimization
 - **Hotjar/Similar**: User session recording and heatmap analysis

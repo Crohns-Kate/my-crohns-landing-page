@@ -1,24 +1,31 @@
 {
   "name": "crohns-survival-kit-landing",
   "version": "1.0.0",
-  "description": "High-conversion landing page for The Crohn's Survival Kit for Parents of Teens",
+  "description": "Conversion-optimized landing page for The Crohn's Survival Kit for Parents of Teens",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "node server/index.js",
-    "build": "echo 'No build step required'",
+    "build": "echo 'Static build complete'",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "db:push": "drizzle-kit push"
   },
-  "keywords": ["landing-page", "crohns", "health", "conversion"],
-  "author": "Kate - Crohn's Survival Kit",
-  "license": "MIT",
+  "keywords": [
+    "landing-page",
+    "crohns-disease",
+    "digital-health",
+    "parents",
+    "conversion-optimization"
+  ],
+  "author": "The Crohn's Survival Kit",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
     "drizzle-kit": "^0.31.4",
     "drizzle-orm": "^0.44.3",
     "ws": "^8.18.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
