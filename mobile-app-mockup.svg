@@ -1,0 +1,62 @@
+<svg width="300" height="600" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone Frame -->
+  <rect x="10" y="10" width="280" height="580" rx="30" ry="30" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="25" y="40" width="250" height="520" rx="15" ry="15" fill="#f8f9fa"/>
+  
+  <!-- Status Bar -->
+  <rect x="25" y="40" width="250" height="25" fill="#4a5568"/>
+  <text x="35" y="58" font-family="Arial, sans-serif" font-size="12" fill="white">9:41</text>
+  <text x="240" y="58" font-family="Arial, sans-serif" font-size="12" fill="white">100%</text>
+  
+  <!-- App Header -->
+  <rect x="25" y="65" width="250" height="60" fill="#2d7d6b"/>
+  <text x="150" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Crohn's Survival Kit</text>
+  <text x="150" y="115" font-family="Arial, sans-serif" font-size="12" fill="#e6fffa" text-anchor="middle">Your Personal Guide</text>
+  
+  <!-- Navigation Tabs -->
+  <rect x="25" y="125" width="250" height="40" fill="#f7fafc"/>
+  <rect x="30" y="130" width="70" height="30" rx="5" fill="#2d7d6b"/>
+  <text x="65" y="150" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Guide</text>
+  <text x="135" y="150" font-family="Arial, sans-serif" font-size="12" fill="#4a5568" text-anchor="middle">Track</text>
+  <text x="205" y="150" font-family="Arial, sans-serif" font-size="12" fill="#4a5568" text-anchor="middle">Tools</text>
+  
+  <!-- Content Cards -->
+  <!-- Card 1 -->
+  <rect x="35" y="180" width="230" height="70" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="55" cy="205" r="12" fill="#81c784"/>
+  <path d="M50 205 L54 209 L60 199" stroke="white" stroke-width="2" fill="none"/>
+  <text x="75" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">Crohn's in Plain English</text>
+  <text x="75" y="215" font-family="Arial, sans-serif" font-size="11" fill="#718096">Understanding the basics</text>
+  <text x="75" y="230" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">15 min read</text>
+  
+  <!-- Card 2 -->
+  <rect x="35" y="260" width="230" height="70" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="55" cy="285" r="12" fill="#ffb74d"/>
+  <path d="M50 280 L55 290 L60 280 L55 285 Z" fill="white"/>
+  <text x="75" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">Flare-Up Food Guide</text>
+  <text x="75" y="295" font-family="Arial, sans-serif" font-size="11" fill="#718096">Safe foods during flares</text>
+  <text x="75" y="310" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Quick reference</text>
+  
+  <!-- Card 3 -->
+  <rect x="35" y="340" width="230" height="70" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="55" cy="365" r="12" fill="#64b5f6"/>
+  <rect x="50" y="358" width="10" height="14" fill="white" rx="1"/>
+  <rect x="52" y="360" width="6" height="2" fill="#64b5f6"/>
+  <rect x="52" y="363" width="6" height="2" fill="#64b5f6"/>
+  <rect x="52" y="366" width="6" height="2" fill="#64b5f6"/>
+  <text x="75" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">Symptom Tracking</text>
+  <text x="75" y="375" font-family="Arial, sans-serif" font-size="11" fill="#718096">Log daily symptoms</text>
+  <text x="75" y="390" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0">Today's entry</text>
+  
+  <!-- Progress Bar -->
+  <text x="150" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4a5568" text-anchor="middle">Your Progress</text>
+  <rect x="50" y="450" width="200" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="50" y="450" width="120" height="8" rx="4" fill="#2d7d6b"/>
+  <text x="150" y="475" font-family="Arial, sans-serif" font-size="11" fill="#718096" text-anchor="middle">60% Complete</text>
+  
+  <!-- Bottom Navigation -->
+  <rect x="25" y="520" width="250" height="40" fill="#f7fafc"/>
+  <circle cx="70" cy="540" r="8" fill="#2d7d6b"/>
+  <circle cx="150" cy="540" r="8" fill="#cbd5e0"/>
+  <circle cx="230" cy="540" r="8" fill="#cbd5e0"/>
+</svg>

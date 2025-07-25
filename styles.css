@@ -253,6 +253,46 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-secondary);
 }
 
+.course-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course-mockup {
+  width: 400px;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.course-description {
+  flex: 1;
+  text-align: left;
+}
+
+.course-description h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.course-description p {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
 .kit-items {
   display: grid;
   grid-template-columns: 1fr;
@@ -444,6 +484,26 @@ h1, h2, h3, h4, h5, h6 {
   .author-placeholder i {
     font-size: 2.5rem;
   }
+  
+  .course-preview, .app-preview {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+  
+  .course-description, .app-description {
+    text-align: center;
+  }
+  
+  .course-mockup {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .app-mockup {
+    width: 150px;
+    max-width: 180px;
+  }
 }
 
 /* Tablet Styles */
@@ -527,6 +587,18 @@ h1, h2, h3, h4, h5, h6 {
   
   .bonus-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .course-preview, .app-preview {
+    flex-direction: row;
+  }
+  
+  .course-mockup {
+    width: 350px;
+  }
+  
+  .app-mockup {
+    width: 180px;
   }
   
   .hero {
