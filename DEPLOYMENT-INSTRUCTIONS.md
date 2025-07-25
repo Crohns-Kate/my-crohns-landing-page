@@ -11,7 +11,12 @@
 4. `kate-photo.jpg` ✅ (Kate's professional photo)
 5. `mobile-app-mockup.svg` ✅ (Mobile app preview image)
 6. `kajabi-course-mockup.svg` ✅ (Course platform preview image)
-7. `vercel.json` ✅ (Vercel configuration)
+7. `digital-platform-preview.jpg` ✅ (Product platform image)
+8. `food-diary-app-preview.png` ✅ (Food diary app image)
+9. `gratitude-journal-preview.png` ✅ (Gratitude journal app image)
+10. `privacy-policy.html` ✅ (Privacy policy page)
+11. `terms-conditions.html` ✅ (Terms & conditions page)
+12. `vercel.json` ✅ (Vercel configuration)
 5. `.gitignore` ✅ (Git ignore rules)
 6. `README.md` ✅ (Project documentation)
 7. `drizzle.config.json` ✅ (Database configuration)
@@ -28,7 +33,7 @@
 ### Special Files:
 13. `package-production.json` ✅ (Rename this to `package.json`)
 
-**Total: 16 files to download**
+**Total: 21 files to download**
 
 ---
 
