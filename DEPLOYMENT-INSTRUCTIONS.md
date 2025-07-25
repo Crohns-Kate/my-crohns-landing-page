@@ -8,7 +8,8 @@
 1. `index.html` ✅ (Your main landing page)
 2. `styles.css` ✅ (All styling)
 3. `crohns-logo.jpg` ✅ (Your actual logo)
-4. `vercel.json` ✅ (Vercel configuration)
+4. `kate-photo.jpg` ✅ (Kate's professional photo)
+5. `vercel.json` ✅ (Vercel configuration)
 5. `.gitignore` ✅ (Git ignore rules)
 6. `README.md` ✅ (Project documentation)
 7. `drizzle.config.json` ✅ (Database configuration)
@@ -24,6 +25,8 @@
 
 ### Special Files:
 13. `package-production.json` ✅ (Rename this to `package.json`)
+
+**Total: 14 files to download**
 
 ---
 
@@ -49,6 +52,7 @@
    ├── index.html
    ├── styles.css
    ├── crohns-logo.jpg
+   ├── kate-photo.jpg
    ├── package.json (renamed from package-production.json)
    ├── vercel.json
    ├── .gitignore
