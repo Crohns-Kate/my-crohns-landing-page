@@ -2,9 +2,43 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
+const { Pool } = require('@neondatabase/serverless');
 
-// Import our API handler (we'll need to transpile or use a different approach for TypeScript)
-// For now, we'll create a simple server that serves static files and provides basic endpoints
+// Database setup
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+
+// Database query helpers
+async function insertVisitor(data) {
+  const query = `
+    INSERT INTO visitors (session_id, user_agent, referrer, ip_address, created_at)
+    VALUES ($1, $2, $3, $4, NOW())
+    ON CONFLICT (session_id) DO NOTHING
+    RETURNING id
+  `;
+  const values = [data.sessionId, data.userAgent, data.referrer, data.ipAddress];
+  return await pool.query(query, values);
+}
+
+async function insertNewsletterSignup(data) {
+  const query = `
+    INSERT INTO newsletter_signups (email, name, source, created_at)
+    VALUES ($1, $2, $3, NOW())
+    ON CONFLICT (email) DO NOTHING
+    RETURNING id
+  `;
+  const values = [data.email, data.name, data.source || 'landing_page'];
+  return await pool.query(query, values);
+}
+
+async function insertContactSubmission(data) {
+  const query = `
+    INSERT INTO contact_submissions (name, email, subject, message, created_at)
+    VALUES ($1, $2, $3, $4, NOW())
+    RETURNING id
+  `;
+  const values = [data.name, data.email, data.subject, data.message];
+  return await pool.query(query, values);
+}
 
 const server = http.createServer(async (req, res) => {
   const parsedUrl = url.parse(req.url, true);
@@ -34,25 +68,46 @@ const server = http.createServer(async (req, res) => {
         try {
           const data = JSON.parse(body);
           
-          // Simple tracking endpoint (we'll expand this later)
+          // Visitor tracking endpoint
           if (pathname === '/api/track-visitor') {
-            console.log('Visitor tracked:', data);
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true }));
+            try {
+              await insertVisitor(data);
+              console.log('Visitor tracked:', data);
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ success: true }));
+            } catch (error) {
+              console.error('Error tracking visitor:', error);
+              res.writeHead(500, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ error: 'Failed to track visitor' }));
+            }
             return;
           }
           
           if (pathname === '/api/newsletter-signup') {
-            console.log('Newsletter signup:', data);
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true, message: 'Successfully subscribed!' }));
+            try {
+              await insertNewsletterSignup(data);
+              console.log('Newsletter signup:', data);
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ success: true, message: 'Successfully subscribed!' }));
+            } catch (error) {
+              console.error('Error with newsletter signup:', error);
+              res.writeHead(500, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ error: 'Failed to subscribe' }));
+            }
             return;
           }
           
           if (pathname === '/api/contact') {
-            console.log('Contact submission:', data);
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true, message: 'Message sent successfully!' }));
+            try {
+              await insertContactSubmission(data);
+              console.log('Contact submission:', data);
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ success: true, message: 'Message sent successfully!' }));
+            } catch (error) {
+              console.error('Error with contact submission:', error);
+              res.writeHead(500, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ error: 'Failed to send message' }));
+            }
             return;
           }
           
